@@ -21,9 +21,10 @@ export async function getServerData() {
     };
   } catch (error) {
     return {
-      status: 500,
-      headers: {},
-      props: {},
+      props: {
+        message:
+          "https://www.sensorsdata.com/assets/_gatsby/static/picture-analyse-new-e166c737329835ef3c644c2c0bc2e520.png",
+      },
     };
   }
 }

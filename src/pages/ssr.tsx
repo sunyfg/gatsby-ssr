@@ -1,9 +1,11 @@
 import * as React from "react";
-
-const SSRPage = ({ serverData }) => (
+interface SSRPageProps {
+  serverData?: any;
+}
+const SSRPage: React.FC<SSRPageProps> = ({ serverData }) => (
   <main>
     <h1>SSR Page with Dogs</h1>
-    <img alt="Happy dog" src={serverData.message} />
+    <img alt="Happy dog" src={serverData?.message} />
   </main>
 );
 
